@@ -1,17 +1,30 @@
-import React from 'react';
+import React from "react";
+import { Route, Routes, BrowserRouter, useNavigate, Navigate } from "react-router-dom";
+import { useAuthContext } from "./hooks/useAuthContext";
+
+//pages
+import Login from "./component/Login";
+import Signup from "./component/Signup";
+import Navbar from "./component/Navbar";
+import Welcome from "./component/Welcome";
 
 function App() {
+  const { authIsReady, user } = useAuthContext();
+  
+
   return (
-    <div style={{ textAlign: 'center' }}>
-      <header>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {authIsReady && (
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/welcome" element={user ?  (<Welcome />) : (<Navigate replace to="/login" />)} />
+            <Route path="/signup" element={user ? (<Navigate replace to="/welcome" />) : (<Signup />)} />
+            <Route path="/login" element={user ? (<Navigate replace to="/welcome" />) : (<Login />)} />
+          </Routes>
+        </BrowserRouter>
+      )}
+    </>
   );
 }
 

@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --green: #1f9751;
+    --white: #ffffff;
+    --coral-pink: #FC3549;
+  }
+
+/* base styles */
+body {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  font-size: 1.1em;
+}
+ul, li, p, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+.btn {
+  background: none;
+  border: 2px solid #1f9751;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: #1f9751;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+}
+.btn:hover {
+  background: #1f9751;
+  color: #fff;
+}
+.btn:disabled{
+    background: #8EBDA1;
+    color: #fff;
+    border: none;
+}
+.link{
+    color: #1f9751;
+    text-decoration: underline;
+}
+.link:active{
+    color: #1f2f97;
+}
+
+/* navbar styles */
+.navbar {
+    width: 100%;
+    background: #1f9751;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+.navbar ul {
+    display: flex;
+    margin: 0 auto;
+    max-width: 960px;
+    align-items: center;
+}
+.navbar li {
+    color: white;
+    font-weight: 500;
+}
+.title {
+    margin-right: auto;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    color: white;
+}
+.navbar button, .navbar a {
+    margin-left: 16px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* login styles */
+
+.login-form {
+    max-width: 360px;
+    margin: 60px auto;
+    padding: 50px;
+    border-radius: 0.3rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)
+}
+.login-form h2 {
+    color: #1f9751;
+    margin-bottom: 2rem;
+}
+.login-form input {
+    padding: 8px 6px;
+    font-size: 1em;
+    color: #777;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.login-form span {
+    display: block;
+    margin-top: 2rem;
+  }
+
+/* signup styles */
+
+.signup-form {
+    max-width: 360px;
+    margin: 60px auto;
+    padding: 50px;
+    border-radius: 0.3rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)
+}
+.signup-form h2 {
+    color: #1f9751;
+    margin-bottom: 2rem;
+}
+.signup-form input {
+    padding: 8px 6px;
+    font-size: 1em;
+    color: #777;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.signup-form span {
+    display: block;
+    margin-top: 2rem;
+}
+
+/* logout styles */
+
+.btn-logout {
+    background: none;
+    border: 2px solid white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+}
+.btn-logout:hover {
+    background: white;
+    color: #1f9751;
+}
+
+/* error styles */
+
+.error {
+    margin-top: 15px;
+    color: red;
+}
+
+/* welcome styles */
+
+.welcome{
+    color: #1f9751;
+    text-align: center;
+    margin: 150px;
+}
+.welcome p {
+    font-size: 2em;
+    font-weight: 400;
+}
+.welcome small{
+    font-size: 1em;
+}
