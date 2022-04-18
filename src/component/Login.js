@@ -38,7 +38,7 @@ function Login() {
         </button>
       )}
       {error && <p className="error">{error}</p>}
-      <span>Not a user? <Link to={"/signup"} className="link">Signup</Link></span>
+      <span>Not a user? <Link to={"/"} className="link">Signup</Link></span>
     </form>
   );
 }

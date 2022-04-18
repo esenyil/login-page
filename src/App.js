@@ -19,7 +19,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/welcome" element={user ?  (<Welcome />) : (<Navigate replace to="/login" />)} />
-            <Route path="/signup" element={user ? (<Navigate replace to="/welcome" />) : (<Signup />)} />
+            <Route path="/" element={user ? (<Navigate replace to="/welcome" />) : (<Signup />)} />
             <Route path="/login" element={user ? (<Navigate replace to="/welcome" />) : (<Login />)} />
           </Routes>
         </BrowserRouter>
