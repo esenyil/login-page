@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       {authIsReady && (
-        <BrowserRouter basename="/login-app/">
+        <BrowserRouter basename="/login-page/">
           <Navbar />
           <Routes>
             <Route path="/welcome" element={user ?  (<Welcome />) : (<Navigate replace to="/login" />)} />
