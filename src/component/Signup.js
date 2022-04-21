@@ -10,13 +10,36 @@ function Signup() {
   const [err, setErr] = useState("");
   const { signup, isPending, error } = useSignup();
 
+  const validateEmail = (email) => {
+    const parts = email.split("@")
+
+    //Validating that 1 @ is present and only one
+    if (parts.length !== 2){
+      return "Please at an @"
+    }
+
+    if (parts[0].length === 0) {
+      return 'the local email is empty'
+    }
+
+    if (parts[1].toLowerCase() !== "cphbusiness.dk") {
+      return "wrong domain, domain must be 'cphbusiness.dk'"
+    }
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const emailErr = validateEmail(email)
+
     if (confirmPassword !== password) {
       setErr("Password must match");
-    } else {
+    } else if (emailErr) {
+      setErr(emailErr)
+    }
+    else {
       signup(email, password, userName);
     }
+    
   };
 
   return (
